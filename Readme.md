@@ -2,6 +2,8 @@
 
 This project demonstrates a complete data engineering pipeline for an eCommerce scenario using Python, Hive, and Spark on the ITversity platform. It includes data generation, storage in HDFS, table creation in Hive, and data analysis using Spark. The project is designed for beginners to practice key data engineering concepts and tools.
 
+*Note: Initally I didn't create directory and organize this file, so you may find some improper file path in shell script, if you are working with this project, keep in mind either put files out of directory or edit the shell script according to it*
+
 ---
 
 ## Objectives
@@ -47,7 +49,7 @@ This project demonstrates a complete data engineering pipeline for an eCommerce 
 - Necessary Python libraries: `faker`, `pyspark`.
 - Hive and HDFS configured and accessible.
 
-*Note: If running outside the ITversity platform, ensure you have a Hadoop cluster with Hive and Spark installed and properly configured.*
+*_Note: If running outside the ITversity platform, ensure you have a Hadoop cluster with Hive and Spark installed and properly configured.*
 
 ### Installation
 
