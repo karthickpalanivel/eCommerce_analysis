@@ -30,7 +30,7 @@ CREATE TABLE orders (
     customer_id STRING,
     products STRING,
     total_order_amount DOUBLE,
-    date STRING,
+    order_date STRING,
     returned STRING
 )
 ROW FORMAT DELIMITED
