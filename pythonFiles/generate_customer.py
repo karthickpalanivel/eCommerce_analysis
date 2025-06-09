@@ -10,5 +10,5 @@ with open('customers.csv', 'w', newline='') as f:
         customer_id = str(i)
         name = fake.name()
         phone = fake.phone_number()
-        address = f'["{fake.building_number()}", "{fake.street_name()}", "{fake.city()}", "{fake.postcode()}"]'
+        address = f'[{fake.building_number()}, {fake.street_name()}, {fake.city()}, {fake.postcode()}]'
         writer.writerow([customer_id, name, phone, address])
