@@ -29,6 +29,6 @@ with open('orders.csv', 'w', newline='') as f:
             order_items.append({'product_id': product_id, 'quantity': quantity})
         
         products_json = json.dumps(order_items)
-        date = (datetime.now() - timedelta(days=random.randint(0, 365))).strftime('%Y-%-m-%d')
+        date = (datetime.now() - timedelta(days=random.randint(0, 365))).strftime('%Y-%M-%d')
         returned = random.choice(['True', 'False'])
         writer.writerow([order_id, customer_id, products_json, round(total_amount, 2), date, returned])
