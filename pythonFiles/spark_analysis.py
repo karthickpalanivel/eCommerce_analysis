@@ -6,6 +6,7 @@ from pyspark.sql.types import ArrayType, StructType, StructField, StringType, In
 spark = SparkSession.builder.appName("eCommerce Analysis").enableHiveSupport().getOrCreate()
 
 # Load tables
+spark.sql("use sixfive_db")
 customers_df = spark.table("customers")
 products_df = spark.table("products")
 orders_df = spark.table("orders")
@@ -26,7 +27,7 @@ orders_expanded_df = orders_df.withColumn("products_array", from_json(col("produ
                              .withColumn("product", explode(col("products_array"))) \
                              .select(
                                  col("order_id"), col("customer_id"), col("total_order_amount"),
-                                 col("date"), col("returned"),
+                                 col("order_date"), col("returned"),
                                  col("product.product_id"), col("product.quantity")
                              )
 

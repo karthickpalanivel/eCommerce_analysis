@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Generate CSV files
-python3 ./pythonFiles/generate_customers.py
-python3 ./pythonFiles/generate_products.py
-python3 ./pythonFiles/generate_orders.py
+# python3 ./pythonFiles/generate_customers.py
+# python3 ./pythonFiles/generate_products.py
+# python3 ./pythonFiles/generate_orders.py
 
 # Create HDFS directory and upload files
 hdfs dfs -mkdir -p /user/itv017008/ecommerce
